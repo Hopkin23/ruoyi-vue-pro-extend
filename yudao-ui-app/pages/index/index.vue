@@ -13,8 +13,8 @@
     <u-gap height="20px"></u-gap>
 
     <!--宫格菜单按钮-->
-    <u-grid :border="false" col="4">
-      <u-grid-item v-for="(item, index) in menuList" :key="index">
+    <u-grid :border="false" col="5">
+      <u-grid-item v-for="(item, index) in menuList" :key="index" @click="goDetail(item.page)">
         <u-icon :name="item.icon" :size="40"></u-icon>
         <text class="grid-title">{{ item.title }}</text>
       </u-grid-item>
@@ -59,10 +59,11 @@ export default {
         }
       ],
       menuList: [
-        { icon: 'gift', title: '热门推荐' },
-        { icon: 'star', title: '收藏转发' },
-        { icon: 'thumb-up', title: '点赞投币' },
-        { icon: 'heart', title: '感谢支持' }
+        { icon: 'gift', title: '热门推荐', page: '' },
+        { icon: 'star', title: '收藏转发', page: '' },
+        { icon: 'thumb-up', title: '点赞投币', page: '' },
+        { icon: 'heart', title: '感谢支持' , page: '' },
+        { icon: 'heart', title: '邻里互助', page: '/pages/sns/publish'  }
       ],
       noticeList: ['寒雨连江夜入吴', '平明送客楚山孤', '洛阳亲友如相问', '一片冰心在玉壶'],
       productList: [
@@ -122,6 +123,12 @@ export default {
     },
     handleSearchClick(e) {
       uni.$u.route('/pages/search/search')
+    },
+    goDetail: function(e) {
+      console.log(e)
+      uni.navigateTo({
+        url: e
+      })
     }
   },
   computed: {

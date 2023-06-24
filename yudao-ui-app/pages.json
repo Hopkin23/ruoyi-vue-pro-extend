@@ -115,8 +115,16 @@
       "style": {
         "navigationBarTitleText": "修改地址"
       }
+    },
+    {
+      "path" : "pages/sns/publish",
+      "style" :
+      {
+          "navigationBarTitleText": "邻里互助",
+          "enablePullDownRefresh": false
+      }
     }
-	],
+    ],
 	"tabBar": {
 		"selectedColor": "#333333",
 		"color": "#bfbfbf",
