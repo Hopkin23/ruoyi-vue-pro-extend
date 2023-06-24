@@ -9,7 +9,7 @@ import store from './store'
 
 Vue.config.productionTip = false
 Vue.prototype.$store = store
-
+Vue.prototype.$baseUrl="https://www.fastmock.site/mock/1d21b87566bc33e3bb0a41da26467bc4/v2"   //线上接口
 
 
 App.mpType = 'app'
