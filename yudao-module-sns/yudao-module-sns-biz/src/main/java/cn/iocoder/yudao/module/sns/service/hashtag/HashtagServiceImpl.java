@@ -5,7 +5,7 @@ import javax.annotation.Resource;
 import org.springframework.validation.annotation.Validated;
 
 import java.util.*;
-import cn.iocoder.yudao.module.sns.controller.admin.hashtag.vo.*;
+import cn.iocoder.yudao.module.sns.controller.app.hashtag.vo.*;
 import cn.iocoder.yudao.module.sns.dal.dataobject.hashtag.HashtagDO;
 import cn.iocoder.yudao.framework.common.pojo.PageResult;
 

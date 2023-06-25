@@ -4,7 +4,7 @@ import java.util.*;
 import cn.iocoder.yudao.framework.common.pojo.PageResult;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
-import cn.iocoder.yudao.module.sns.controller.admin.publish.vo.*;
+import cn.iocoder.yudao.module.sns.controller.app.publish.vo.*;
 import cn.iocoder.yudao.module.sns.dal.dataobject.publish.PublishDO;
 
 /**

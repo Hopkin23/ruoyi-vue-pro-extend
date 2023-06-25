@@ -2,7 +2,7 @@ package cn.iocoder.yudao.module.sns.service.comment;
 
 import java.util.*;
 import javax.validation.*;
-import cn.iocoder.yudao.module.sns.controller.admin.comment.vo.*;
+import cn.iocoder.yudao.module.sns.controller.app.comment.vo.*;
 import cn.iocoder.yudao.module.sns.dal.dataobject.comment.CommentDO;
 import cn.iocoder.yudao.framework.common.pojo.PageResult;
 

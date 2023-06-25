@@ -2,7 +2,7 @@ package cn.iocoder.yudao.module.sns.service.publish;
 
 import java.util.*;
 import javax.validation.*;
-import cn.iocoder.yudao.module.sns.controller.admin.publish.vo.*;
+import cn.iocoder.yudao.module.sns.controller.app.publish.vo.*;
 import cn.iocoder.yudao.module.sns.dal.dataobject.publish.PublishDO;
 import cn.iocoder.yudao.framework.common.pojo.PageResult;
 import cn.iocoder.yudao.module.sns.enums.LikeMarkTypeConstants;

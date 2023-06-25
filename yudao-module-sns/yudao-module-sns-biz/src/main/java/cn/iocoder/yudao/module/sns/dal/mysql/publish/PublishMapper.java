@@ -6,10 +6,8 @@ import cn.iocoder.yudao.framework.common.pojo.PageResult;
 import cn.iocoder.yudao.framework.mybatis.core.query.LambdaQueryWrapperX;
 import cn.iocoder.yudao.framework.mybatis.core.mapper.BaseMapperX;
 import cn.iocoder.yudao.module.sns.dal.dataobject.publish.PublishDO;
-import cn.iocoder.yudao.module.sns.enums.LikeTypeConstants;
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.apache.ibatis.annotations.Mapper;
-import cn.iocoder.yudao.module.sns.controller.admin.publish.vo.*;
+import cn.iocoder.yudao.module.sns.controller.app.publish.vo.*;
 import org.apache.ibatis.annotations.Param;
 
 /**

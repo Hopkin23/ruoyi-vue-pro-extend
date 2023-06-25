@@ -6,7 +6,7 @@ import cn.iocoder.yudao.framework.common.pojo.PageResult;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
-import cn.iocoder.yudao.module.sns.controller.admin.like.vo.*;
+import cn.iocoder.yudao.module.sns.controller.app.like.vo.*;
 import cn.iocoder.yudao.module.sns.dal.dataobject.like.LikeDO;
 
 /**

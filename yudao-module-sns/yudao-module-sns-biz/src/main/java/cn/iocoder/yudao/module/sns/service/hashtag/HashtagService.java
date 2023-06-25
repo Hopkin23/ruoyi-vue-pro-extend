@@ -2,7 +2,7 @@ package cn.iocoder.yudao.module.sns.service.hashtag;
 
 import java.util.*;
 import javax.validation.*;
-import cn.iocoder.yudao.module.sns.controller.admin.hashtag.vo.*;
+import cn.iocoder.yudao.module.sns.controller.app.hashtag.vo.*;
 import cn.iocoder.yudao.module.sns.dal.dataobject.hashtag.HashtagDO;
 import cn.iocoder.yudao.framework.common.pojo.PageResult;
 

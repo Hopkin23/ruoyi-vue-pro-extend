@@ -9,7 +9,7 @@ import javax.annotation.Resource;
 import org.springframework.validation.annotation.Validated;
 
 import java.util.*;
-import cn.iocoder.yudao.module.sns.controller.admin.like.vo.*;
+import cn.iocoder.yudao.module.sns.controller.app.like.vo.*;
 import cn.iocoder.yudao.module.sns.dal.dataobject.like.LikeDO;
 import cn.iocoder.yudao.framework.common.pojo.PageResult;
 

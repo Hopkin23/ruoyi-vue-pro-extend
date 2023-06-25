@@ -56,11 +56,11 @@ public class PublishDO extends BaseDO {
     /**
      * 评论数
      */
-    private Integer comment_count;
+    private Integer commentCount;
 
     /**
      * 点赞数
      */
-    private Integer like_count;
+    private Integer likeCount;
 
 }

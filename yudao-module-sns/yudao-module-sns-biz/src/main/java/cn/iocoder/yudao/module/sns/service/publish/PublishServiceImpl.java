@@ -12,7 +12,7 @@ import javax.annotation.Resource;
 import org.springframework.validation.annotation.Validated;
 import java.util.*;
 import java.util.stream.Collectors;
-import cn.iocoder.yudao.module.sns.controller.admin.publish.vo.*;
+import cn.iocoder.yudao.module.sns.controller.app.publish.vo.*;
 import cn.iocoder.yudao.module.sns.dal.dataobject.publish.PublishDO;
 import cn.iocoder.yudao.framework.common.pojo.PageResult;
 import cn.iocoder.yudao.module.sns.convert.publish.PublishConvert;

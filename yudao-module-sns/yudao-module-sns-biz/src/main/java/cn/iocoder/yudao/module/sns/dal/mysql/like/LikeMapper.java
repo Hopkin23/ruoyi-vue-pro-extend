@@ -7,7 +7,7 @@ import cn.iocoder.yudao.framework.mybatis.core.query.LambdaQueryWrapperX;
 import cn.iocoder.yudao.framework.mybatis.core.mapper.BaseMapperX;
 import cn.iocoder.yudao.module.sns.dal.dataobject.like.LikeDO;
 import org.apache.ibatis.annotations.Mapper;
-import cn.iocoder.yudao.module.sns.controller.admin.like.vo.*;
+import cn.iocoder.yudao.module.sns.controller.app.like.vo.*;
 
 /**
  * 点赞 Mapper

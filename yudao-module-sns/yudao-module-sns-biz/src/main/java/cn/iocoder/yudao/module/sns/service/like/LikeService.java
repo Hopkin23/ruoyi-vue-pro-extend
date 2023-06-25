@@ -2,7 +2,7 @@ package cn.iocoder.yudao.module.sns.service.like;
 
 import java.util.*;
 import javax.validation.*;
-import cn.iocoder.yudao.module.sns.controller.admin.like.vo.*;
+import cn.iocoder.yudao.module.sns.controller.app.like.vo.*;
 import cn.iocoder.yudao.module.sns.dal.dataobject.like.LikeDO;
 import cn.iocoder.yudao.framework.common.pojo.PageResult;
 

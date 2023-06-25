@@ -7,7 +7,7 @@ import cn.iocoder.yudao.framework.mybatis.core.query.LambdaQueryWrapperX;
 import cn.iocoder.yudao.framework.mybatis.core.mapper.BaseMapperX;
 import cn.iocoder.yudao.module.sns.dal.dataobject.hashtag.HashtagDO;
 import org.apache.ibatis.annotations.Mapper;
-import cn.iocoder.yudao.module.sns.controller.admin.hashtag.vo.*;
+import cn.iocoder.yudao.module.sns.controller.app.hashtag.vo.*;
 
 /**
  * 话题标签 Mapper

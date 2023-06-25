@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import org.springframework.validation.annotation.Validated;
 import java.util.*;
-import cn.iocoder.yudao.module.sns.controller.admin.comment.vo.*;
+import cn.iocoder.yudao.module.sns.controller.app.comment.vo.*;
 import cn.iocoder.yudao.module.sns.dal.dataobject.comment.CommentDO;
 import cn.iocoder.yudao.framework.common.pojo.PageResult;
 import cn.iocoder.yudao.module.sns.convert.comment.CommentConvert;
