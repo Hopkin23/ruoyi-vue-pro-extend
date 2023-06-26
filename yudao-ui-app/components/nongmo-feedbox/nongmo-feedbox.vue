@@ -97,15 +97,6 @@
             text: '删除',
           },
         ],
-        publishList: [{
-          username: '顾艺馨',
-          avatar:
-            'https://img0.baidu.com/it/u=2322326169,1418475405&fm=11&fmt=auto&gp=0.jpg',
-          content: '今天的数学题, 有点难度, 不过终于解答出来了, 大家一起加油.',
-          image:
-            'https://wx1.sinaimg.cn/mw600/71db2511ly1gqcn92klluj21zi2z9npe.jpg',
-          date: '2021-06-01',
-        }],
         show: false,
         tips: {
           text: '是否删除该条动态?',
