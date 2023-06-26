@@ -19,20 +19,20 @@ public class PublishBaseVO {
     @NotNull(message = "话题标签 ID不能为空")
     private Long hashtagId;
 
-    @Schema(description = "标题", required = true)
+    @Schema(description = "标题", required = true, example = "手机售卖")
     @NotNull(message = "标题不能为空")
     private String title;
 
-    @Schema(description = "内容", required = true)
+    @Schema(description = "内容", required = true, example = "iphone手机99新")
     @NotNull(message = "内容不能为空")
     private String content;
 
     @Schema(description = "图片的数组", required = false)
     private List<String> picUrls;
 
-    @Schema(description = "评论数", required = true)
+    @Schema(description = "评论数", required = true, example = "21")
     private Integer commentCount;
 
-    @Schema(description = "点赞数", required = true)
+    @Schema(description = "点赞数", required = true, example = "99")
     private Integer likeCount;
 }

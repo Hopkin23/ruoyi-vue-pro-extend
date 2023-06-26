@@ -83,7 +83,6 @@ public class PublishController {
     @Operation(summary = "获得帖子分页")
     @PreAuthorize("@ss.hasPermission('sns:publish:query')")
     public CommonResult<PageResult<PublishRespVO>> getPublishPage(@Valid PublishPageReqVO pageVO) {
-        // todo 是否我已经点赞
         return success(publishService.getPublishPage(pageVO));
     }
 

@@ -7,7 +7,7 @@ import lombok.Getter;
 import java.util.Arrays;
 
 /**
- * 点赞类型
+ * 点赞业务类型
  */
 @Getter
 @AllArgsConstructor

@@ -13,5 +13,8 @@ public interface ErrorCodeConstants {
 
     ErrorCode LIKE_NOT_EXISTS = new ErrorCode(10012, "点赞不存在");
 
+    ErrorCode LIKE_NUMBER_ERROR = new ErrorCode(10014, "点赞记录条数有误");
+
     ErrorCode HASHTAG_NOT_EXISTS = new ErrorCode(10013, "话题标签不存在");
+
 }

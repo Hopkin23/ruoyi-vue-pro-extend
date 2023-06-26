@@ -1,9 +1,11 @@
 package cn.iocoder.yudao.module.sns.service.publish;
 
 import cn.iocoder.yudao.module.sns.dal.dataobject.hashtag.HashtagDO;
+import cn.iocoder.yudao.module.sns.dal.dataobject.like.LikeDO;
 import cn.iocoder.yudao.module.sns.enums.LikeMarkTypeConstants;
 import cn.iocoder.yudao.module.sns.enums.LikeTypeConstants;
 import cn.iocoder.yudao.module.sns.service.hashtag.HashtagService;
+import cn.iocoder.yudao.module.sns.service.like.LikeService;
 import cn.iocoder.yudao.module.system.api.user.AdminUserApi;
 import cn.iocoder.yudao.module.system.api.user.dto.AdminUserRespDTO;
 import org.springframework.beans.BeanUtils;
@@ -38,6 +40,9 @@ public class PublishServiceImpl implements PublishService {
 
     @Resource
     private HashtagService hashtagService;
+
+    @Resource
+    private LikeService likeService;
 
     @Override
     public Long createPublish(PublishCreateReqVO createReqVO) {
@@ -78,6 +83,8 @@ public class PublishServiceImpl implements PublishService {
         Map<Long, AdminUserRespDTO> userInfoMap = getUserInfoMap(Collections.singletonList(publishDO));
         Map<Long, HashtagDO> hashtagInfoMap = getHashtagInfoMap(Collections.singletonList(publishDO));
         convertVO(publishRespVO, userInfoMap, hashtagInfoMap);
+        // 点赞信息
+        updateIsLikeRespVo(publishRespVO, publishDO);
         return publishRespVO;
     }
 
@@ -90,12 +97,50 @@ public class PublishServiceImpl implements PublishService {
     public PageResult<PublishRespVO> getPublishPage(PublishPageReqVO pageReqVO) {
         PageResult<PublishDO> publishDOPageResult = publishMapper.selectPage(pageReqVO);
         List<PublishDO> publishDOList = publishDOPageResult.getList();
+
+        // 转换返回
         Map<Long, AdminUserRespDTO> userInfoMap = getUserInfoMap(publishDOList);
         Map<Long, HashtagDO> hashtagInfoMap = getHashtagInfoMap(publishDOList);
-        // 转换返回
-        return convertPageVO(publishDOPageResult, userInfoMap, hashtagInfoMap);
+        PageResult<PublishRespVO> publishRespVOPageResult = convertPageVO(publishDOPageResult, userInfoMap, hashtagInfoMap);
+        // 是否点赞
+        updateIsLikeRespVo(publishRespVOPageResult, publishDOList);
+        return publishRespVOPageResult;
     }
 
+    /**
+     * 是否点赞处理（单条数据处理）
+     * @param publishRespVO 返回的帖子数据
+     * @param publishDO 帖子
+     */
+    private void updateIsLikeRespVo(PublishRespVO publishRespVO, PublishDO publishDO) {
+        // 获取点赞记录
+        List<LikeDO> likeList = likeService.getLikeList(LikeTypeConstants.PUBLISH, LikeMarkTypeConstants.LIKE,
+                Collections.singletonList(publishDO.getId()));
+        if (likeList.size() > 1) {
+            throw exception(LIKE_NUMBER_ERROR);
+        }
+
+        Set<Long> likedPublishIdSet = likeList.stream().map(LikeDO::getLikeId).collect(Collectors.toSet());
+        publishRespVO.setIsLike(likedPublishIdSet.contains(likeList.get(0).getId()));
+    }
+
+    /**
+     * 是否点赞处理（分页数据处理）
+     * @param publishRespVOPageResult 分页列表
+     * @param publishDOList 帖子列表
+     */
+    private void updateIsLikeRespVo(PageResult<PublishRespVO> publishRespVOPageResult, List<PublishDO> publishDOList) {
+        // 获取点赞记录
+        List<Long> publishIdList = publishDOList.stream().map(PublishDO::getId).distinct().collect(Collectors.toList());
+        List<LikeDO> likeList = likeService.getLikeList(LikeTypeConstants.PUBLISH, LikeMarkTypeConstants.LIKE, publishIdList);
+
+        Set<Long> likedPublishIdSet = likeList.stream().map(LikeDO::getLikeId).collect(Collectors.toSet());
+        // 信息封装
+        publishRespVOPageResult.getList().forEach((item) -> {
+            boolean present = likedPublishIdSet.contains(item.getUserId());
+            item.setIsLike(present);
+        });
+    }
 
     @Override
     public List<PublishDO> getPublishList(PublishExportReqVO exportReqVO) {

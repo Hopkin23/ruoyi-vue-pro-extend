@@ -91,4 +91,9 @@ public class LikeServiceImpl implements LikeService {
         return likeMapper.selectList(exportReqVO);
     }
 
+    @Override
+    public List<LikeDO> getLikeList(LikeTypeConstants likeTypeConstants, LikeMarkTypeConstants likeMarkTypeConstants, List<Long> likeIdList) {
+        return null;
+    }
+
 }
