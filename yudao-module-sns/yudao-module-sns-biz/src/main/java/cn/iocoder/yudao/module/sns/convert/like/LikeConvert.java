@@ -11,8 +11,6 @@ import cn.iocoder.yudao.module.sns.dal.dataobject.like.LikeDO;
 
 /**
  * 点赞 Convert
- *
- * @author 芋道源码
  */
 @Mapper
 public interface LikeConvert {

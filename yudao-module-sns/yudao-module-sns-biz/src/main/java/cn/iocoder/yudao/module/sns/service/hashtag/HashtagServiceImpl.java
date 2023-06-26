@@ -3,22 +3,17 @@ package cn.iocoder.yudao.module.sns.service.hashtag;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import org.springframework.validation.annotation.Validated;
-
 import java.util.*;
 import cn.iocoder.yudao.module.sns.controller.app.hashtag.vo.*;
 import cn.iocoder.yudao.module.sns.dal.dataobject.hashtag.HashtagDO;
 import cn.iocoder.yudao.framework.common.pojo.PageResult;
-
 import cn.iocoder.yudao.module.sns.convert.hashtag.HashtagConvert;
 import cn.iocoder.yudao.module.sns.dal.mysql.hashtag.HashtagMapper;
-
 import static cn.iocoder.yudao.framework.common.exception.util.ServiceExceptionUtil.exception;
 import static cn.iocoder.yudao.module.sns.enums.ErrorCodeConstants.*;
 
 /**
  * 话题标签 Service 实现类
- *
- * @author 芋道源码
  */
 @Service
 @Validated

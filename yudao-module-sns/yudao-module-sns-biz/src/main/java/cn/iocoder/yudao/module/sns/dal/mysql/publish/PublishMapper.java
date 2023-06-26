@@ -1,7 +1,6 @@
 package cn.iocoder.yudao.module.sns.dal.mysql.publish;
 
 import java.util.*;
-
 import cn.iocoder.yudao.framework.common.pojo.PageResult;
 import cn.iocoder.yudao.framework.mybatis.core.query.LambdaQueryWrapperX;
 import cn.iocoder.yudao.framework.mybatis.core.mapper.BaseMapperX;
@@ -12,8 +11,6 @@ import org.apache.ibatis.annotations.Param;
 
 /**
  * 帖子 Mapper
- *
- * @author 芋道源码
  */
 @Mapper
 public interface PublishMapper extends BaseMapperX<PublishDO> {

@@ -1,15 +1,11 @@
 package cn.iocoder.yudao.module.sns.controller.app.like.vo;
 
 import lombok.*;
-
 import java.time.LocalDateTime;
-
 import com.alibaba.excel.annotation.ExcelProperty;
 
 /**
  * 点赞 Excel VO
- *
- * @author 芋道源码
  */
 @Data
 public class LikeExcelVO {

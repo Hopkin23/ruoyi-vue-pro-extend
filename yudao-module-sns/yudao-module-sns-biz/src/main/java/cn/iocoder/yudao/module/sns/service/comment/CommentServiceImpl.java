@@ -16,8 +16,6 @@ import static cn.iocoder.yudao.module.sns.enums.ErrorCodeConstants.*;
 
 /**
  * 评论 Service 实现类
- *
- * @author 芋道源码
  */
 @Service
 @Validated

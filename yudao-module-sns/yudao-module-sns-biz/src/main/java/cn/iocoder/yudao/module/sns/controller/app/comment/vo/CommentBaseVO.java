@@ -2,7 +2,6 @@ package cn.iocoder.yudao.module.sns.controller.app.comment.vo;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
-
 import javax.validation.constraints.*;
 
 /**

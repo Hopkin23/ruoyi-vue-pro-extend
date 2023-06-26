@@ -8,8 +8,6 @@ import cn.iocoder.yudao.framework.common.pojo.PageResult;
 
 /**
  * 话题标签 Service 接口
- *
- * @author 芋道源码
  */
 public interface HashtagService {
 

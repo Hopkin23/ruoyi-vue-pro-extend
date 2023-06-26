@@ -10,8 +10,6 @@ import cn.iocoder.yudao.module.sns.enums.LikeTypeConstants;
 
 /**
  * 帖子 Service 接口
- *
- * @author 芋道源码
  */
 public interface PublishService {
 

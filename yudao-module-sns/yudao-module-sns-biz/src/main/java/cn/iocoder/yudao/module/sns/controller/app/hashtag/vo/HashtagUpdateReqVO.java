@@ -2,7 +2,6 @@ package cn.iocoder.yudao.module.sns.controller.app.hashtag.vo;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
-
 import javax.validation.constraints.*;
 
 @Schema(description = "管理后台 - 话题标签更新 Request VO")

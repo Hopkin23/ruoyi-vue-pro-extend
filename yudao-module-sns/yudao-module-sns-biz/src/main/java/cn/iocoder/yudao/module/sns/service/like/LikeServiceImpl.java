@@ -7,22 +7,17 @@ import cn.iocoder.yudao.module.sns.service.publish.PublishService;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import org.springframework.validation.annotation.Validated;
-
 import java.util.*;
 import cn.iocoder.yudao.module.sns.controller.app.like.vo.*;
 import cn.iocoder.yudao.module.sns.dal.dataobject.like.LikeDO;
 import cn.iocoder.yudao.framework.common.pojo.PageResult;
-
 import cn.iocoder.yudao.module.sns.convert.like.LikeConvert;
 import cn.iocoder.yudao.module.sns.dal.mysql.like.LikeMapper;
-
 import static cn.iocoder.yudao.framework.common.exception.util.ServiceExceptionUtil.exception;
 import static cn.iocoder.yudao.module.sns.enums.ErrorCodeConstants.*;
 
 /**
  * 点赞 Service 实现类
- *
- * @author 芋道源码
  */
 @Service
 @Validated

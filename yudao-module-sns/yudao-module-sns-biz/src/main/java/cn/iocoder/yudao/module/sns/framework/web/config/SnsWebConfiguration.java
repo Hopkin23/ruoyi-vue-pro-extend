@@ -7,8 +7,6 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * sns 模块的 web 组件的 Configuration
- *
- * @author 芋道源码
  */
 @Configuration(proxyBeanMethods = false)
 public class SnsWebConfiguration {

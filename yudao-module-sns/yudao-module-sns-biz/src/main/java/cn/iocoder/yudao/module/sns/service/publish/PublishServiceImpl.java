@@ -25,8 +25,6 @@ import static cn.iocoder.yudao.module.system.enums.ErrorCodeConstants.USER_NOT_E
 
 /**
  * 帖子 Service 实现类
- *
- * @author 芋道源码
  */
 @Service
 @Validated

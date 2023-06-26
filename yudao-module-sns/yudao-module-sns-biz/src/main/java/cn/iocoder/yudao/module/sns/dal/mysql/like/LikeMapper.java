@@ -1,7 +1,6 @@
 package cn.iocoder.yudao.module.sns.dal.mysql.like;
 
 import java.util.*;
-
 import cn.iocoder.yudao.framework.common.pojo.PageResult;
 import cn.iocoder.yudao.framework.mybatis.core.query.LambdaQueryWrapperX;
 import cn.iocoder.yudao.framework.mybatis.core.mapper.BaseMapperX;
@@ -11,8 +10,6 @@ import cn.iocoder.yudao.module.sns.controller.app.like.vo.*;
 
 /**
  * 点赞 Mapper
- *
- * @author 芋道源码
  */
 @Mapper
 public interface LikeMapper extends BaseMapperX<LikeDO> {

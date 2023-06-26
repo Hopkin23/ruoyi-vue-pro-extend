@@ -8,8 +8,6 @@ import cn.iocoder.yudao.framework.common.pojo.PageResult;
 
 /**
  * 评论 Service 接口
- *
- * @author 芋道源码
  */
 public interface CommentService {
 

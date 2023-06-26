@@ -8,8 +8,6 @@ import com.alibaba.excel.annotation.ExcelProperty;
 
 /**
  * 评论 Excel VO
- *
- * @author 芋道源码
  */
 @Data
 public class CommentExcelVO {

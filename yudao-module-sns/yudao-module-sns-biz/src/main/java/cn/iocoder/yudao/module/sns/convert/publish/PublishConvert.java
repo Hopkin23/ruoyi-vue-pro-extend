@@ -9,8 +9,6 @@ import cn.iocoder.yudao.module.sns.dal.dataobject.publish.PublishDO;
 
 /**
  * 帖子 Convert
- *
- * @author 芋道源码
  */
 @Mapper
 public interface PublishConvert {
